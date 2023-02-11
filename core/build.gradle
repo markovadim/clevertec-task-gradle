@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.clevertec'
+
+java {
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
+}
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dir 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: '*.jar')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,3 @@
+rootProject.name = 'clevertec-task-gradle'
+include 'core'
+include 'api'

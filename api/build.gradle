@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.clevertec'
+
+java {
+    sourceCompatibility = "1.8"
+    targetCompatibility = "1.8"
+}
+
+repositories {
+    mavenCentral()
+}
+jar {
+    manifest(){
+        attributes('Main-Class': 'App')
+    }
+}
+
+dependencies {
+    implementation project(':core')
+}
+
+test {
+    useJUnitPlatform()
+}
